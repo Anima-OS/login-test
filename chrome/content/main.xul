@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+ <!--main.xul - the main window chrome.
+ 
+ Copyright (c) 2016, Sto SE & Co. KGaA
+ 
+ This software may be modified and distributed under the terms
+ of the BSD license.  See the LICENSE file for details.-->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<window id="main"
+        sizemode="fullscreen"
+        windowtype="navigator:browser"
+        hidechrome="false"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:svg="http://www.w3.org/2000/svg">
+
+<browser type="chrome" class="viewport" id="viewport" src="chrome://login/content/index.html" flex="1"/>
+
+</window>

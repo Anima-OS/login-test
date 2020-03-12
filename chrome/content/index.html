@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="defaultLanguage" content="en-US">
+  <meta name="availableLanguages" content="en-US, de-DE">
+  <title>White Rabbit Login Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <script src="node_modules/webcomponents.js/webcomponents-lite.min.js"></script>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="import" href="node_modules/@polymer/paper-input/paper-input.html">
+  <link rel="localization" href="locales/rabbit.{locale}.ftl">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/panel.css">
+
+  <style is="custom-style">
+    paper-input {
+      --paper-input-container-color: white;
+      --paper-input-container-focus-color: white;
+      --paper-input-container-invalid-color: red;
+      --paper-input-container-input-color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="viewport">
+    <span id="clock"></span>
+
+    <body class="background-desktop-picture" spellcheck="false">
+      <script>
+        function Testopen() {
+          $(".newtab-customize-panel").toggleClass("newtab-customize-panel-open")
+        }
+      </script>
+      <div id="newtab-customize-button" onclick="Testopen();" class="newtab-customize-panel-container" value="⚙" title="Customize your New Tab page">
+        <div class="newtab-customize-panel-container">
+          <div class="newtab-customize-panel" orient="vertical">
+            <div id="newtab-customize-panel-anchor"></div>
+            <div id="newtab-customize-panel-inner-wrapper">
+              <div id="newtab-customize-title" data-l10n-id="panel-option-title">
+                <!-- Options -->
+              </div>
+
+              <div class="newtab-customize-complex-option">
+                <div id="newtab-customize-enhanced" class="newtab-customize-panel-item">
+                  <label>Display Settings</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loginContainer">
+        <div class="login">
+          <svg class="login__check1" viewBox="0 0 299.995 299.995">
+            <g>
+              <g>
+                <g>
+                  <path d="M149.997,161.485c-8.613,0-15.598,6.982-15.598,15.598c0,5.776,3.149,10.807,7.817,13.505v17.341h15.562v-17.341
+				c4.668-2.697,7.817-7.729,7.817-13.505C165.595,168.467,158.611,161.485,149.997,161.485z" />
+                  <path d="M150.003,85.849c-13.111,0-23.775,10.665-23.775,23.775v25.319h47.548v-25.319
+				C173.775,96.516,163.111,85.849,150.003,85.849z" />
+                  <path d="M149.995,0.001C67.156,0.001,0,67.159,0,149.998c0,82.837,67.156,149.997,149.995,149.997s150-67.161,150-149.997
+				C299.995,67.159,232.834,0.001,149.995,0.001z M196.085,227.118h-92.173c-9.734,0-17.626-7.892-17.626-17.629v-56.919
+				c0-8.491,6.007-15.582,14.003-17.25v-25.697c0-27.409,22.3-49.711,49.711-49.711c27.409,0,49.709,22.3,49.709,49.711v25.697
+				c7.993,1.673,14,8.759,14,17.25v56.919h0.002C213.711,219.225,205.819,227.118,196.085,227.118z" />
+                </g>
+              </g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+          </svg>
+          <div class="login__form">
+            <div class="login__row">
+              <svg class="login__icon name svg-icon" viewBox="0 0 20 20">
+                <path d="M0,20 a10,8 0 0,1 20,0z M10,0 a4,4 0 0,1 0,8 a4,4 0 0,1 0,-8" />
+              </svg>
+              <paper-input class="login__input name" label="Username" char-counter maxlength="32" />
+            </div>
+            <div class="login__row">
+              <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
+                <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
+              </svg>
+              <paper-input type="password" class="login__input pass" label="Password" />
+            </div>
+            <button type="button" class="login__submit">Sign in</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#draggable").draggable();
+    });
+  </script>
+  
+  <script src="chrome://login/content/js/index.js"></script>
+  <script src="js/clock.js"></script>
+  
+  <!-- Eventually we'll want to add l20n to toolkit/modules/ or toolkit/content/ -->
+  <!-- <script defer src="resource://qbrt/modules/l20n.js"></script> -->
+  <script defer src="node_modules/l20n/dist/web/l20n.js"></script>
+
+  </body>
+
+</html>

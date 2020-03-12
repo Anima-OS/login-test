@@ -1,0 +1,211 @@
+.newtab-customize-panel-container {
+  position: absolute;
+  margin-right: 35px;
+  right: 0;
+}
+
+.newtab-customize-panel-container:dir(rtl) {
+  right: auto;
+  left: 0;
+}
+
+#newtab-customize-button {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  z-index: 101;
+}
+
+#newtab-customize-button:dir(rtl) {
+  left: 20px;
+  right: auto;
+}
+
+#newtab-customize-button,
+.newtab-customize {
+  background-image: url(./cog.svg);
+  background-size: 28px;
+  background-color: rgba(0,0,0,0.4);
+  height: 38px;
+  width: 38px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.newtab-customize-panel {
+    z-index: 999;
+    margin-top: 40px;
+    min-width: 340px;
+    position: absolute;
+    top: 100%;
+    right: -30px;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.4)) drop-shadow(0 3px 4px rgba(0,0,0,0.4));
+    transition: all 150ms ease-in-out;
+    transform-origin: top right;
+    transform: translate(-30px, -20px) scale(0) translate(30px, 20px);
+}
+
+#newtab-customize-panel:dir(rtl) {
+  transform-origin: 40px top 20px;
+}
+
+#newtab-customize-panel:dir(rtl),
+#newtab-customize-panel-anchor:dir(rtl) {
+  left: 15px;
+  right: auto;
+}
+
+.newtab-customize-panel-open {
+  transform: translate(-30px, -20px) scale(1) translate(30px, 20px);
+}
+
+#newtab-customize-panel-anchor {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0,0,0,0.5);
+  transform: rotate(45deg);
+  position: absolute;
+  top: -6px;
+  right: 8px;
+}
+
+#newtab-customize-title {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  /* background-color: #FFFFFF; */
+  line-height: 25px;
+  padding: 15px;
+  font-weight: 600;
+  cursor: default;
+  border-radius: 5px 5px 0px 0px;
+  max-width: 600px;
+  overflow: hidden;
+  display: table-cell;
+  border-top: none;
+}
+
+#newtab-customize-panel-inner-wrapper {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+#newtab-customize-title > label {
+  cursor: default;
+}
+
+#newtab-customize-panel > .panel-arrowcontainer > .panel-arrowcontent {
+  padding: 0;
+}
+
+.newtab-customize-panel-item {
+  line-height: 25px;
+  padding: 15px;
+  padding-inline-start: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  max-width: 600px;
+}
+
+.newtab-customize-panel-item:not(:first-child) {
+  border-top: 1px solid threedshadow;
+}
+
+.newtab-customize-panel-subitem > label,
+.newtab-customize-panel-item > label,
+.newtab-customize-complex-option {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.newtab-customize-panel-item,
+.newtab-customize-complex-option {
+  display: block;
+  text-align: start;
+}
+
+.newtab-customize-panel-item[selected]:dir(rtl){
+  background-position: right 15px center;
+}
+
+.newtab-customize-complex-option:hover > .selectable:not([selected]):dir(rtl),
+.selectable:not([selected]):hover:dir(rtl) {
+  background-position: right 15px center;
+}
+
+.newtab-customize-panel-item:not([selected]),
+.newtab-customize-panel-subitem:not([selected]){
+  color: #7A7A7A;
+}
+
+.newtab-customize-panel-item:not([selected]):hover {
+  color: rgba(255,255,255,0.8);
+  background-color: rgba(74,144,226,0.3)
+}
+
+.newtab-customize-panel-subitem {
+  font-size: 12px;
+  padding: 0px 15px 15px 15px;
+  padding-inline-start: 40px;
+  display: block;
+  max-width: 600px;
+}
+
+.newtab-customize-panel-subitem > label {
+  padding: 0px 10px;
+  line-height: 20px;
+  vertical-align: middle;
+  max-width: 225px;
+}
+
+.menuItem1 {
+  padding:0px 0 0px 5px; margin-bottom:-1px; 
+  border-top:1px solid rgba(24,25,26,0.14); 
+  border-bottom:1px solid transparent; 
+  border-right:0 none rgb(0,0,0); 
+  border-left:0 none rgb(0,0,0);
+  width: calc((22.35em / 3 - 0.1px));
+  height: calc(51px + 2.2em);
+  background: transparent;
+}
+
+.newtab-customize-panel-superitem {
+  line-height: 20px;
+  border-bottom: medium none !important;
+  padding: 15px 15px 10px 15px;
+  padding-inline-start: 40px;
+  border-top: 1px solid threedshadow;
+}
+
+.newtab-customize-panel-item[selected] {
+  background-size: 16px 16px;
+  background-position: 15px 15px;
+  color: black;
+  font-weight: 600;
+}
+
+.newtab-customize-panel-subitem > .checkbox {
+  width: 18px;
+  height: 18px;
+  background-color: #FFFFFF;
+  border: solid 1px threedshadow;
+}
+
+.newtab-customize-panel-subitem[selected] > .checkbox {
+  background: url("chrome://global/skin/menu/shared-menu-check-black.svg") no-repeat #FFFFFF;
+  background-size: 9px 9px;
+  background-position: center;
+  color: #333333;
+}
+
+.menuItem1:hover {
+  background-color: #EFEFEF;
+  border: solid #E3E3E3 1px;
+}
+
+.menuItem1:hover:active {
+  background-color: #E8E8E8;
+  border: solid #E3E3E3 1px;
+}
